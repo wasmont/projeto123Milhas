@@ -21,9 +21,9 @@ $router->get('/', function () use ($router) {
  * String deve ter 32 caracteres
  * A chave pode ser definida no arquivo de ambiente .env
  */
-$router->get('/key', function() {
-    return \Illuminate\Support\Str::random(32);
-});
+// $router->get('/key', function() {
+//     return \Illuminate\Support\Str::random(32);
+// });
 
 // JOB para atualizar tabelas de Integração com a API Voos Flights
 $router->get('buscarVoos', ['as' => 'buscarVoos', 'uses' => 'VoosFlightsController@buscarVoos']);

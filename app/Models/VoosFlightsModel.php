@@ -18,6 +18,11 @@ class VoosFlightsModel extends Model
     //     $this->setTable($type);
     // }
     
+    
+    /**
+     *Method responsável por gravar todos os voos recebidos da API flights
+     *@param array()  
+     */
     public function gravarVoos($voos = array()){
         $totalReg = [];
         $totalReg['inseridos'] = 0;
@@ -61,6 +66,7 @@ class VoosFlightsModel extends Model
         }
         return $totalReg;
     }
+
     // @param $rotas se realmente for uma rota desejada - caso contrário retorna o Agrupamento Geral da Documentação
     public function procurarGrupos($rota = null){ 
         $whereIda = "";
